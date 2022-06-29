@@ -1,0 +1,261 @@
+/**
+* 0.通用变量
+* 说明：基础变量只在组件变量中引用，未在组件中使用
+*/
+// 系统主要颜色 - 也是iview主要用色
+@iview-primary-color: var(--theme-color);
+
+// 辅助颜色
+@sys-sub-color-1        : var(--theme-sub-color-1); // 用于次要操作色，如：线框按钮
+@sys-sub-color-2        : var(--theme-sub-color-2); // 用于图标颜色（搭配同色系渐变使用）
+@sys-sub-color-3        : var(--theme-sub-color-3); // 用于表格悬停色、表格表头背景色等
+
+// 状态色
+@sys-status-save        : var(--theme-status-color-1); // 用于次要操作色，如：线框按钮
+@sys-status-warning     : var(--theme-status-color-2); // 用于图标颜色（搭配同色系渐变使用）
+@sys-status-warn        : var(--theme-status-color-3); // 用于表格悬停色、表格表头背景色等
+
+@color-primary      : #1A45B8; // 蓝色
+@color-white        : #EBEEFF; // 灰白色
+// 文本样式
+@base-font-size     : 14px; // 文本大小
+@text-color         : #3E4851; // 文本颜色
+@text-color-light   : #fff; // 明亮颜色
+@text-color-sub     : #487ABF; // 次要文本颜色
+@text-color-active  : #515CF3; // 激活文本颜色
+// @text-color-disabled: fade(@text-color, 20%); // 禁用文本颜色
+@text-color-disabled: @text-color; // 禁用文本颜色
+// 背景样式
+@bg-color           : #13283d;
+@bg-focus           : #13283d;
+@bg-active          : #515CF3;
+@bg-disabled        : #F2F2F2; // 深蓝色，disabled、selected
+// 边框样式
+@border-active      : 1px solid @iview-primary-color;
+@border-disable     : 1px solid #E6E6E6;
+@border-defalut     : 1px solid #ECEEF0;
+// 表单通用默认样式
+@form-height        : 30px;
+
+
+// ** 自定义滚动条 **
+
+// ::-webkit-scrollbar — 整个滚动条.
+// ::-webkit-scrollbar-button — 滚动条上的按钮 (上下箭头).
+// ::-webkit-scrollbar-thumb — 滚动条上的滚动滑块.
+// ::-webkit-scrollbar-track — 滚动条轨道.
+// ::-webkit-scrollbar-track-piece — 滚动条没有滑块的轨道部分.
+// ::-webkit-scrollbar-corner — 当同时有垂直滚动条和水平滚动条时交汇的部分.
+// ::-webkit-resizer — 某些元素的corner部分的部分样式(例:textarea的可拖动按钮).
+
+// #1 【前台滚动】
+// 前台纵向滚动条(常用，默认y轴)
+.show-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width        : 8px;
+    height       : 8px;
+    background   : rgba(241, 242, 246, .7);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius      : 4px;
+    // background-color: @lightGreen;
+    background         : rgba(224, 229, 236, .6);
+  }
+}
+
+// 前台横向滚动条
+.show-scroll-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width        : 8px;
+    height       : 8px;
+    background   : rgba(241, 242, 246, .7);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background   : rgba(224, 229, 236, .6);
+  }
+}
+
+// 前台横向纵向滚动条
+.show-scroll-xy {
+  overflow-y: auto;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width        : 8px;
+    height       : 8px;
+    background   : rgba(241, 242, 246, .7);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background   : rgba(224, 229, 236, .6);
+  }
+}
+
+// #2 【前台表格滚动】
+// 滚动条公共样式
+.show-scroll-table-common {
+
+  // 滚动条轨道
+  &::-webkit-scrollbar {
+    width        : 8px;
+    background   : rgba(241, 242, 246, .7);
+    border-radius: 4px;
+  }
+
+  // 滚动条滑块
+  &::-webkit-scrollbar-thumb {
+    background: rgba(224, 229, 236, .6);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// 滚动条公共样式
+.show-scroll-table-common-2{
+
+  // 滚动条轨道
+  &::-webkit-scrollbar {
+    // width        : 8px;
+    // background   : rgba(241, 242, 246, .7);
+    border-radius: 8px;
+    // border: 5px solid pink;
+  }
+  &::-webkit-scrollbar-track {
+    // width: 8px;
+  }
+  // 滚动条滑块
+  &::-webkit-scrollbar-thumb {
+    background: rgba(224, 229, 236, .6);
+    border: 5px solid #fff;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// 滚动条公共样式
+.show-scroll-photo-sign {
+  // 滚动条轨道
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+  }
+
+  // 滚动条滑块
+  &::-webkit-scrollbar-thumb {
+    background: rgba(241, 242, 246, 1);
+    border: 1px solid #e0e5ec;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// 前台表格滚动条xy
+.show-scroll-table-xy {
+  overflow-y: auto;
+  overflow-x: auto;
+  .show-scroll-table-common()
+}
+
+// 前台表格滚动条x
+.show-scroll-table-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+  .show-scroll-table-common()
+}
+
+// 前台表格滚动条xy
+.show-scroll-table-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+  .show-scroll-table-common()
+}
+.show-scroll-table-xy-2 {
+  overflow-y: auto;
+  overflow-x: auto;
+  .show-scroll-table-common-2()
+}
+// #3【后台滚动】
+// 后台纵向横向滚动条
+.admin-scroll-mini {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width        : 6px;
+    height       : 6px;
+    background   : rgba(16, 30, 50, 1);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background   : #345160;
+  }
+}
+
+// #4【后台表格滚动】
+// 滚动条公共样式
+.admin-scroll-table-common {
+  &::-webkit-scrollbar {
+    border    : 1px solid #345160;
+    padding   : 3px;
+    background: #13283d;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: #13283d;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #345160;
+  }
+
+  &::-webkit-scrollbar-button {}
+}
+
+// 后台x，y轴方向出现滚动
+.admin-scroll-table-xy {
+  overflow-y: auto;
+  overflow-x: auto;
+
+  .admin-scroll-table-common();
+}
+
+// 后台横向横向滚动条
+.admin-scroll-table-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  .admin-scroll-table-common();
+}
+
+// 后台纵向向横向滚动条
+.admin-scroll-table-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .admin-scroll-table-common();
+}
+

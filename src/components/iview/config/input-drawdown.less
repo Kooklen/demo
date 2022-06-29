@@ -1,0 +1,68 @@
+@import './common';
+
+/**
+* 输入框的下拉框
+* 说明：select、cascader、datepicker、timepicker、page的下拉框样式
+*/
+
+// 下拉框外形样式（select、datepicker、timepicker、cascader）
+@input-drawdown-border   : none;
+@input-drawdown-bg       : #fff;
+@input-drawdown-border-b : 1px solid @bg-active;
+@input-drawdown-bg-b     : #13283d;
+
+// 下拉框内容选中项（select、datepicker、timepicker、cascader）
+@input-drawdown-item-text          : rgba(0, 0, 0, 0.65); // 下拉文本-颜色
+@input-drawdown-item-text-hover    : @text-color-active; // 下拉文本-颜色-悬浮
+@input-drawdown-item-text-active   : #1A45B8; // 下拉文本-颜色-选中
+@input-drawdown-item-text-disabled : @text-color-disabled; // 下拉文本-颜色-选中
+@input-drawdown-item-bg-hover      : #EDF4FC; // 下拉选型悬浮状态背景
+@input-drawdown-item-bg-active     : transparent; // 下拉选项选中状态背景
+@input-drawdown-inner-border       : 1px solid fade(#fff, 15%); // 下拉框内部边框（浅色）
+@input-drawdown-inner-border-b     : 1px solid fade(#fff, 15%); // 下拉框内部边框（浅色）
+
+/** 日期、时间时间选择器下拉框（datepicker、timepicker） */
+@datepicker-weekday-color      : rgba(0, 0, 0, 0.85);
+@datepicker-cell-color         : rgba(0, 0, 0, 0.65); // 普通cell文字颜色
+@datepicker-cell-not-this-month: rgba(0, 0, 0, 0.25); // 上一月或下一月cell文字颜色
+//@datepicker-cell-hover-bg      : #F5F5F5; // 悬浮背景色
+@datepicker-cell-hover-bg      : fade(@bg-active , 20%); // 悬浮背景色
+@datepicker-cell-selected-bg   : @bg-active; // 选中时背景色
+@datepicker-cell-focus-bg      : @bg-active; // 选中后背景色
+@datepicker-cell-disabled-bg   : @bg-disabled; // 禁用背景色
+@datepicker-active-text        : #fff; // 激活文本颜色
+@datepicker-hover-text         : #fff;
+
+
+// 输入框下拉样式（边框&背景）
+.input-drawdown-view {
+  border    : @input-drawdown-border;
+  border-radius: 6px;
+  background: @input-drawdown-bg;
+  box-shadow: 0px 9px 28px 8px rgba(193, 203, 215, 0.26), 0px 6px 16px 0px rgba(193, 203, 215, 0.26), 0px 3px 6px -4px rgba(193, 203, 215, 0.26);
+}
+
+.input-drawdown-view-b {
+  border    : @input-drawdown-border-b;
+  background: @input-drawdown-bg-b;
+}
+
+.ivu-select-item-text {
+  color: @input-drawdown-item-text;
+  font-size: 14px !important;
+}
+
+.ivu-select-view-disabled {
+  border    : @border-disable;
+  background: @bg-disabled ;
+  border-radius: 2px;
+  &:hover {
+    border    : @border-disable;
+    background: @bg-disabled ;
+  }
+
+  &:focus {
+    border    : @border-disable;
+    background: @bg-disabled ;
+  }
+}

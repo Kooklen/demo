@@ -1,0 +1,156 @@
+@import './common.less';
+
+// ***** button variable *****
+// 按钮样式
+@btn-color : #fff;
+@btn-height : 30px;
+@btn-border : 1px solid #F2F6FF;
+// @primary-color : #515CF3;
+@primary-color : @iview-primary-color;
+@test-color: %("%a",@iview-primary-color);
+@secondary-color : #727BF3;
+@danger-color : #D13922;
+@disabled-color : #fff;
+@btn-primary-bg : #456BD1;
+
+// ***** button mixin *****
+.btn-text {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #3E60BB;
+}
+
+.btn-height {
+  line-height: calc(@btn-height - 2px);
+  height: @btn-height;
+}
+
+// 主要按钮
+.btn-primary-f {
+  // background: @primary-color;
+  background: @btn-primary-bg;
+  color: @btn-color;
+  box-shadow: 1px 1px 2px 0px #9CB6FA, inset 2px 2px 6px 0px #6D8CE0, inset -1px -1px 6px 0px #355CC4;
+  border: @btn-border;
+  border-radius: 5px;
+
+  &:not(.dis):hover {
+    background: #3065F2;
+    box-shadow: 1px 1px 2px 0px #9CB6FA, 0px 1px 16px 0px #618AFF, inset 2px 2px 6px 0px #6D8CE0, inset -1px -1px 6px 0px #355CC4;
+  }
+
+  // &:active {
+  //   background: linear-gradient(180deg,
+  //       rgba(55, 137, 81, 1),
+  //       rgba(85, 213, 125, 1));
+  // }
+}
+
+.btn-secondary-f {
+  color: #517EF5 !important;
+  background: linear-gradient(180deg, #F5F9FF 0%, #DCE6F5 100%);
+  box-shadow: 1px 1px 4px 0px #B6C2DE, inset 0px 2px 4px 0px #C4D6EF;
+  border: @btn-border;
+  text-shadow: 1px 1px 1px #CCD6E0 !important;
+
+  &:not(.dis):hover {
+    background: linear-gradient(180deg, #FCFEFF 0%, #E6ECF5 100%);
+    box-shadow: 0px 1px 16px 0px #99B4FF, 1px 1px 4px 0px #A7B3CC, inset 0px 2px 4px 0px #C4D6EF;
+  }
+
+  //&:focus,
+  &:active {
+    background: linear-gradient(180deg, #FCFEFF 0%, #E6ECF5 100%);
+    box-shadow: 0px 1px 16px 0px #99B4FF, 1px 1px 4px 0px #A7B3CC, inset 0px 2px 4px 0px #C4D6EF;
+  }
+
+}
+
+.btn-disabled-f {
+  opacity: 0.49;
+}
+
+.btn-danger-f {
+  background: linear-gradient(180deg, #F0A38D 0%, #D13922 100%);
+  box-shadow: 0px 2px 2px 0px #B43C1A, 0px 0px 1px 0px #FFD5A8;
+
+  &:not(.dis):hover {
+    background: linear-gradient(180deg, #FAAA93 0%, #D13922 100%);
+    box-shadow: 0px 2px 20px 0px #FFAB85, 0px 2px 2px 0px #C3431F, 1px 2px 4px 0px #FFE5C2;
+  }
+
+  &:active {
+    background: linear-gradient(180deg, #FAAA93 0%, #D13922 100%);
+    box-shadow: 0px 2px 20px 0px #FFAB85, 0px 2px 2px 0px #C3431F, 1px 2px 4px 0px #FFE5C2;
+  }
+}
+
+// 后台按钮
+.btn-primary-b {
+  background: @primary-color;
+
+  &:hover {
+    // background: lighten(@primary-color, 10%);
+  }
+
+  &:active {
+    // background: darken(@primary-color, 10%);
+  }
+
+}
+
+.btn-secondary-b {
+  background: @secondary-color;
+  border: @btn-border;
+  color: #fff;
+
+  &:hover {
+    border: @btn-border;
+    color: #fff;
+    background: lighten(@secondary-color, 10%);
+  }
+
+  &:active {
+    border: @btn-border;
+    color: #fff;
+    background: darken(@secondary-color, 10%);
+  }
+
+}
+
+.btn-disabled-b {
+  color: #fff;
+  background: @disabled-color;
+  border: 1px solid #345160;
+}
+
+.btn-danger-b {
+  background: @danger-color;
+
+  &:hover {
+    background: lighten(@danger-color, 10%);
+  }
+
+  &:active {
+    background: darken(@danger-color, 10%);
+  }
+}
+
+.btn-upload-f {
+  min-width: 48px;
+  background: #FBFBFB;
+  box-shadow: inset 0px 1px 5px 1px #E1E3FD;
+  border-radius: 4px;
+  color: #515CF3;
+  font-weight: 400;
+
+  &:hover,
+  &:active {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px #9EA5FF, 0px 2px 2px 0px #5C65E0, 0px 1px 5px 1px #E3E5FF;
+    border-radius: 2px;
+    color: #515CF3;
+    font-weight: 500;
+  }
+}

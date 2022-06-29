@@ -1,0 +1,71 @@
+// 默认样式  https://github.com/iview/iview/blob/master/src/styles/custom.less
+// 覆盖iview源代码样式，直接覆盖，不需要手动调用
+
+@import '~iview/src/styles/index.less';
+@import './common.less';
+
+// Color
+@primary-color             : @color-primary;
+// @info-color    : @lightBlue;
+// @success-color : @lightGreen;
+// @warning-color : @warningYellow;
+// @error-color   : @warningRed;
+// @link-color             : #3399ff;
+
+// 解决Page 乱码问题
+@page-prefix-cls: ~"@{css-prefix}page";
+
+.@{page-prefix-cls} {
+
+  &-item-jump-prev,
+  &-item-jump-next {
+    &:after {
+      content  : "..." !important;
+      font-size: 20px;
+    }
+  }
+}
+
+// tooltip 样式覆盖
+//@tooltipBg: #02485E;
+
+.@{tooltip-prefix-cls} {
+  &-popper {
+    //.popper(@tooltip-arrow, @tooltip-arrow-width, @tooltip-distance, @tooltipBg);
+  }
+
+  &-inner {
+    font-size       : 16px;
+    color           : @color-white;
+    //background-color: @tooltipBg;
+    box-shadow      : 1px 2px 8px 0px rgba(0, 0, 0, 0.6);
+  }
+}
+
+//loading
+.ivu-spin {
+  background: rgba(0, 0, 0, .25);
+}
+
+.demo-spin-icon-load {
+  animation: ani-demo-spin 1s linear infinite;
+}
+
+@keyframes ani-demo-spin {
+  from { transform: rotate(0deg);}
+  50%  { transform: rotate(180deg);}
+  to   { transform: rotate(360deg);}
+}
+
+.ivu-message {
+  z-index: 9999 !important;
+}
+
+.ivu-color-picker-picker {
+  > .ivu-color-picker-confirm {
+
+    > .ivu-color-picker-confirm-color {
+      width: calc(100% - 110px);
+    }
+  }
+}

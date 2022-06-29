@@ -1,0 +1,211 @@
+/**
+* 0.通用变量
+* 说明：基础变量只在组件变量中引用，未在组件中使用
+*/
+.show-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.show-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.show-scroll-x::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll-x::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-xy {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.show-scroll-xy::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll-xy::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-table-common::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll-table-common::-webkit-scrollbar-thumb {
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-table-common::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.show-scroll-table-common-2::-webkit-scrollbar {
+  border-radius: 8px;
+}
+.show-scroll-table-common-2::-webkit-scrollbar-thumb {
+  background: rgba(224, 229, 236, 0.6);
+  border: 5px solid #fff;
+  border-radius: 8px;
+}
+.show-scroll-table-common-2::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.show-scroll-photo-sign::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+}
+.show-scroll-photo-sign::-webkit-scrollbar-thumb {
+  background: #f1f2f6;
+  border: 1px solid #e0e5ec;
+  border-radius: 4px;
+}
+.show-scroll-photo-sign::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.show-scroll-table-xy {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.show-scroll-table-xy::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll-table-xy::-webkit-scrollbar-thumb {
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-table-xy::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.show-scroll-table-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.show-scroll-table-x::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll-table-x::-webkit-scrollbar-thumb {
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-table-x::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.show-scroll-table-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.show-scroll-table-y::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(241, 242, 246, 0.7);
+  border-radius: 4px;
+}
+.show-scroll-table-y::-webkit-scrollbar-thumb {
+  background: rgba(224, 229, 236, 0.6);
+}
+.show-scroll-table-y::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.show-scroll-table-xy-2 {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.show-scroll-table-xy-2::-webkit-scrollbar {
+  border-radius: 8px;
+}
+.show-scroll-table-xy-2::-webkit-scrollbar-thumb {
+  background: rgba(224, 229, 236, 0.6);
+  border: 5px solid #fff;
+  border-radius: 8px;
+}
+.show-scroll-table-xy-2::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+}
+.admin-scroll-mini {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.admin-scroll-mini::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: #101e32;
+  border-radius: 4px;
+}
+.admin-scroll-mini::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #345160;
+}
+.admin-scroll-table-common::-webkit-scrollbar {
+  border: 1px solid #345160;
+  padding: 3px;
+  background: #13283d;
+}
+.admin-scroll-table-common::-webkit-scrollbar-corner {
+  background: #13283d;
+}
+.admin-scroll-table-common::-webkit-scrollbar-thumb {
+  background: #345160;
+}
+.admin-scroll-table-xy {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.admin-scroll-table-xy::-webkit-scrollbar {
+  border: 1px solid #345160;
+  padding: 3px;
+  background: #13283d;
+}
+.admin-scroll-table-xy::-webkit-scrollbar-corner {
+  background: #13283d;
+}
+.admin-scroll-table-xy::-webkit-scrollbar-thumb {
+  background: #345160;
+}
+.admin-scroll-table-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.admin-scroll-table-x::-webkit-scrollbar {
+  border: 1px solid #345160;
+  padding: 3px;
+  background: #13283d;
+}
+.admin-scroll-table-x::-webkit-scrollbar-corner {
+  background: #13283d;
+}
+.admin-scroll-table-x::-webkit-scrollbar-thumb {
+  background: #345160;
+}
+.admin-scroll-table-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.admin-scroll-table-y::-webkit-scrollbar {
+  border: 1px solid #345160;
+  padding: 3px;
+  background: #13283d;
+}
+.admin-scroll-table-y::-webkit-scrollbar-corner {
+  background: #13283d;
+}
+.admin-scroll-table-y::-webkit-scrollbar-thumb {
+  background: #345160;
+}

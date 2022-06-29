@@ -1,0 +1,90 @@
+{
+  "name": "super-cloud-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
+    "animate.css": "^4.1.1",
+    "axios": "^0.21.0",
+    "bin-ace-editor": "^3.0.0",
+    "clipboard": "^2.0.11",
+    "core-js": "^3.6.5",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.15.8",
+    "iview": "3.4.2",
+    "jquery": "^3.6.0",
+    "js-base64": "^3.6.0",
+    "qiankun": "^2.7.0",
+    "swiper": "^5.4.5",
+    "view-design": "^4.0.0",
+    "vue": "^2.6.11",
+    "vue-draggable-nested-tree": "^3.0.0-beta2",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0",
+    "vuex-persistedstate": "^4.1.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "drag-tree-table": "^2.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.9.2",
+    "postcss-pxtorem": "^5.1.1",
+    "prettier": "^2.2.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass-loader": "^7.0.3",
+    "style-resources-loader": "^1.4.1",
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^4.3.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "example/custom": true,
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": "off",
+      "quotes": "off",
+      "no-console": "off",
+      "space-before-function-paren": "off",
+      "prefer-const": "off",
+      "no-useless-escape": "off",
+      "eol-last": "off",
+      "quote-props": "off",
+      "vue/no-parsing-error": [
+        2,
+        {
+          "x-invalid-end-tag": false
+        }
+      ]
+    }
+  }
+}

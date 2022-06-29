@@ -1,0 +1,140 @@
+@import './common';
+
+// 说明：输入表单类包括：input、select、datepicker、timepicker、cascader等表单类型组件
+
+// ***** form variable *****
+@input-icon-color :fade(#fff, 60%); // 输入框icon颜色
+// 表单标签样式（input、select、datepicker、timepicker、cascader）
+@label-color      : @color-white; // 输入框标签颜色
+@label-color-b    : @text-color;
+@label-size       : @base-font-size; // 输入框字体大小
+@label-mr         : 8px; // 标签与输入框的间隔margin-right
+
+// 表单样式（input、select、datepicker、timepicker、cascader）
+@input-font-size    : @base-font-size;
+@input-text-color   : rgba(0, 0, 0, 0.65);
+@placeholder-color  : #D7D7D7; // placeholder
+@input-width-short  : 120px; // input宽度-short
+@input-width-middle : 266px; // input宽度-middle
+@input-width-long   : 400px; // input宽度-long
+@input-height       : @form-height; // input高度
+
+// 边框（input、select、datepicker、timepicker、cascader）
+@input-border          : 1px solid #ECEEF0; // 输入框边框
+@input-border-disabled : 1px solid #E6E6E6; // 禁止
+@input-border-active   : @border-active;
+
+// 背景（input、select、datepicker、timepicker、cascader）
+@input-bg          : #F4F6FA; // 2. 按钮
+@input-bg-b        : transparent;
+@input-bg-disabled : @bg-disabled;
+@input-bg-focus-b  : #13283d;
+@input-bg-hover    : #FFFFFF;
+
+// 前置、后置内容（input、select）
+@input-pend-color : #BBBBBB; // prepend & append
+@input-pend-bg    : #33515f; // prepend & append
+
+// switch开关
+@switch-text         : @text-color;
+@switch-text-active  : @text-color;
+@switch-text-disabled: @text-color-disabled;
+@switch-bg-active    : #618bd9;
+@switch-bg-disabled  : #EBEEFF;
+
+
+// ***** mixin class *****
+// 必填写项修饰*号
+.required {
+  &::before {
+    content     : '*';
+    color       : red;
+    margin-right: 4px;
+  }
+}
+
+// placeholder
+.placeholder {
+  font-size: @input-font-size;
+  color    : @placeholder-color  !important;
+}
+
+// 输入框标签样式
+.input-label {
+  font-size   : @label-size;
+  color       : @label-color;
+  margin-right: @label-mr;
+}
+
+// input文本（字体&颜色）
+.input-text {
+  font-size: @input-font-size;
+  color    : @input-text-color;
+}
+
+// 输入框容器与标签布局（flex布局）
+.input-layout {
+  display        : inline-flex;
+  align-items    : center;
+  justify-content: flex-end;
+}
+
+// 输入框宽度（3种width）
+.input-width {
+  &.input-long {
+    width: @input-width-long;
+  }
+
+  &.input-middle {
+    width: @input-width-middle;
+  }
+
+  &.input-short {
+    width: @input-width-short;
+  }
+}
+
+// 输入框高度（height & line-height）
+.input-height {
+  height     : @input-height;
+  line-height: @input-height;
+}
+
+// 输入框样式（边框&背景）
+.input-view {
+  border    : 1px solid @input-border;
+  border-radius: 2px;
+  background: @input-bg;
+}
+
+.input-view-hover {
+  border: @input-border-active;
+  background: @input-bg-hover;
+}
+
+.input-view-focus {
+  border: @input-border-active;
+  background: @input-bg-hover;
+  box-shadow: 3px 4px 4px -1px rgba(145, 153, 255, 0.31);
+}
+
+.input-view-disabled {
+  border    : @input-border-disabled;
+  background: @input-bg-disabled;
+
+  &:hover {
+    border    : @input-border-disabled;
+    background: @input-bg-disabled;
+  }
+}
+
+.input-view-b {
+  border    : @input-border;
+  background: @input-bg-b;
+}
+
+.input-view-hover-b {}
+
+.input-view-focus-b {}
+
+.input-view-disabled-b {}
